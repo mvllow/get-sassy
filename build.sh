@@ -42,6 +42,8 @@ if [ "$lang" = "1" ]; then
     clear
 
     lang="sass"
+
+    sass src/$lang/main.scss dist/css/flat-ui-colors.${min}css
 elif [ "$lang" = "2" ]; then
     clear
 
