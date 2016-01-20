@@ -2,7 +2,7 @@
 [Flat UI Colors](http://flatuicolors.com) functions, mixins, and variables for stylus and sass
 
 ## Usage
-Coming soon to a store near your.
+Coming soon to a store near you
 
 ## Compile
 To compile yourself, download the respective folder within `/src` and run the below command(s).
