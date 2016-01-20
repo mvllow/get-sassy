@@ -9,13 +9,13 @@ To compile yourself, download the respective folder within `/src` and run the be
 
 ### Stylus
 ```
-$ stylus -o css -w styl
+$ stylus -w main.styl
 ```
 
 Optionally add prefixes to all classes
 
 ```
-$ stylus --prefix fui- -o css -w styl
+$ stylus --prefix fui- main.styl
 ```
 
 The newly generated css classes will now prepended with **fui**:

@@ -33,6 +33,8 @@ echo
 echo "1. Sass (Coming soon)"
 echo "2. Stylus"
 echo
+echo "3. Compile and compress all"
+echo
 echo -e "Option #: "
 read lang
 
@@ -58,6 +60,7 @@ elif [ "$lang" = "2" ]; then
     read option_isCompressed
 
     if [ "$option_isCompressed" = "y" ]; then
+        min="min."
         isCompressed="-c"
     fi
 
@@ -67,7 +70,7 @@ elif [ "$lang" = "2" ]; then
     checkFiles
 
     echo "compiling $lang to css..."
-    stylus $options -o dist/css/ src/$lang/main.styl > /dev/null 2>&1
+    stylus $options -o dist/css/flat-ui-colors.${min}css src/$lang/main.styl > /dev/null 2>&1
 
     echo "compiling lib..."
     echo "/*!
