@@ -1,4 +1,4 @@
-# sassy-fui
+# Sassy-fui
 [Flat UI Colors](http://flatuicolors.com) functions, mixins, and variables for Sass, Stylus, and vanilla CSS
 
 ## Getting started
