@@ -54,8 +54,8 @@ if command -v stylus &>/dev/null; then
     echo "Compiling lib..."
     echo "/*!
      * version: $version
-     * mellowdev.com | @sociallymellow
-     * github.com/sociallymellow/$package
+     * mellow.sh | @mvllow
+     * github.com/mvllow/$package
      */" > dist/$package.$lang_ext
 
     echo "${color_success}Success${color_reset}"
