@@ -6,8 +6,8 @@ version="0.2"
 package="sassy-fui"
 
 color_reset="\033[0m"
-solor_failed="\033[91m"
-solor_success="\033[0;32m"
+color_failed="\033[91m"
+color_success="\033[0;32m"
 
 echo "Sassy-fui build tool"
 echo
@@ -34,9 +34,9 @@ if command -v sass &>/dev/null; then
      * github.com/sociallymellow/$package
      */" > dist/$package.$lang_ext
 
-    echo "${solor_success}Success${color_reset}"
+    echo "${color_success}Success${color_reset}"
 else
-    echo "${solor_failed}Err${color_reset} sass not found"
+    echo "${color_failed}Err${color_reset} sass not found"
 fi
 
 if command -v stylus &>/dev/null; then
@@ -58,8 +58,8 @@ if command -v stylus &>/dev/null; then
      * github.com/sociallymellow/$package
      */" > dist/$package.$lang_ext
 
-    echo "${solor_success}Success${color_reset}"
+    echo "${color_success}Success${color_reset}"
     echo
 else
-    echo "${solor_failed}Err${color_reset} stylus not found"
+    echo "${color_failed}Err${color_reset} stylus not found"
 fi
