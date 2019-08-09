@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  font-family: _font(family);
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: _font(family-var);
+  }
+}
+
+body {
+  color: _palette(fg);
+  background: _palette(bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,116 @@
+@import url("https://rsms.me/inter/inter.css");
+.color-bg {
+  background-color: #ffffff !important;
+}
+
+.color-text-bg {
+  color: #ffffff !important;
+}
+
+.color-bg-alt {
+  background-color: #202124 !important;
+}
+
+.color-text-bg-alt {
+  color: #202124 !important;
+}
+
+.color-fg {
+  background-color: #202124 !important;
+}
+
+.color-text-fg {
+  color: #202124 !important;
+}
+
+.color-fg-alt {
+  background-color: #ffffff !important;
+}
+
+.color-text-fg-alt {
+  color: #ffffff !important;
+}
+
+.color-border {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.color-text-border {
+  color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.color-accent {
+  background-color: #4169e1 !important;
+}
+
+.color-text-accent {
+  color: #4169e1 !important;
+}
+
+.color-accent-border {
+  background-color: #4762b2 !important;
+}
+
+.color-text-accent-border {
+  color: #4762b2 !important;
+}
+
+.color-accent-alt {
+  background-color: #3858b7 !important;
+}
+
+.color-text-accent-alt {
+  color: #3858b7 !important;
+}
+
+.color-accent-bg {
+  background-color: rgba(65, 105, 225, 0.25) !important;
+}
+
+.color-text-accent-bg {
+  color: rgba(65, 105, 225, 0.25) !important;
+}
+
+*,
+*:before,
+*:after {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+}
+body {
+  color: #202124;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

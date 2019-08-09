@@ -1,0 +1,182 @@
+$duration: (
+  transition: 0.2s
+);
+
+$breakpoint: (
+  medium: 80em
+);
+
+$size: (
+  border-radius: 0.325rem,
+  element-margin: 1.5rem,
+  content-width: 80rem,
+  header-height: 72px,
+  side-nav-width: 280px
+);
+
+$system-font: (
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Helvetica,
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol"
+);
+
+$system-font-fixed: (
+  "SFMono-Regular",
+  Consolas,
+  "Liberation Mono",
+  Menlo,
+  Courier,
+  monospace
+);
+
+$font: (
+  family: (
+    "Inter",
+    $system-font
+  ),
+  family-var: (
+    "Inter var",
+    $system-font
+  ),
+  family-fixed: (
+    $system-font-fixed
+  ),
+  family-heading: (
+    "Inter",
+    $system-font
+  ),
+  weight: 300,
+  weight-bold: 600,
+  weight-extrabold: 700,
+  kerning: 0.0375em,
+  kerning-heading: 0.175em,
+  kerning-heading-alt: -0.05em
+);
+
+$palette: (
+  bg: #ffffff,
+  bg-alt: #202124,
+  fg: #202124,
+  fg-alt: #ffffff,
+  border: rgba(0, 0, 0, 0.12),
+  accent: #4169e1,
+  accent-border: desaturate(darken(#4169e1, 8), 30),
+  accent-alt: desaturate(darken(#4169e1, 10), 20),
+  accent-bg: transparentize(#4169e1, 0.75)
+);
+/// Gets a value from a map
+/// @param {map} $map Map
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function val($map, $keys...) {
+  @if nth($keys, 1) == null {
+    $keys: remove-nth($keys, 1);
+  }
+
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+/// Gets a duration value
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function _duration($keys...) {
+  @return val($duration, $keys...);
+}
+
+/// Gets a breakpoint value
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function _breakpoint($keys...) {
+  @return val($breakpoint, $keys...);
+}
+
+/// Gets a size value
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function _size($keys...) {
+  @return val($size, $keys...);
+}
+
+/// Gets a font value
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function _font($keys...) {
+  @return val($font, $keys...);
+}
+
+/// Gets a palette value
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function _palette($keys...) {
+  @return val($palette, $keys...);
+}
+@each $name, $color in $palette {
+  .color-#{$name} {
+    background-color: $color !important;
+  }
+  .color-text-#{$name} {
+    color: $color !important;
+  }
+}
+*,
+*:before,
+*:after {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  font-family: _font(family);
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: _font(family-var);
+  }
+}
+
+body {
+  color: _palette(fg);
+  background: _palette(bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+@import url("https://rsms.me/inter/inter.css");
+
+
+
+
+
+
+

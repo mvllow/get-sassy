@@ -1,0 +1,17 @@
+{
+  "name": "get-sassy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mvllow/get-sassy.git",
+  "author": "mvllow <dev.mellow@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "bundle-scss -m \"./sass/**/*.scss\" -d \"./dist/get-sassy.scss\"",
+    "build.dist": "sass sass/main.scss dist/get-sassy.css --no-source-map",
+    "build.dist.min": "sass sass/main.scss dist/get-sassy.min.css --no-source-map --style=compressed"
+  },
+  "devDependencies": {
+    "bundle-scss": "^1.4.5",
+    "sass": "^1.22.9"
+  }
+}
